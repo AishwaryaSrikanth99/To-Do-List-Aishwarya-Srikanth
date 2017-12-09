@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.todolist.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titlename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Do List"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerHorizontal="true"
+            android:textSize="32sp"
+            android:paddingBottom="16dp"/>
+        <EditText
+
+            android:id="@+id/taskname"
+            android:layout_below="@+id/titlename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Task Name"
+            android:inputType="textCapWords"
+            android:paddingBottom="16dp"/>
+        <EditText
+
+            android:id="@+id/taskdes"
+            android:layout_below="@+id/taskname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Task Description"
+
+            android:inputType="textCapWords" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/taskdes"
+            android:layout_weight="1"
+            android:fastScrollAlwaysVisible="true"
+            android:fastScrollEnabled="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"></ListView>
+
+        <Button
+            android:id="@+id/addbutton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+
+            android:layout_below="@+id/listview"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="60dp"
+
+            android:text="Add"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+</ScrollView>
+
